@@ -28,6 +28,21 @@ Just getting started. Structure, illusion set, and model list are still being de
 
 ## Development
 
+### Setup
+
+Requires [uv](https://docs.astral.sh/uv/) (it installs Python 3.12 for you if needed).
+
+```bash
+git clone https://github.com/Eladhirsh/Illusionator.git
+cd Illusionator
+uv sync
+uv run pytest
+```
+
+Code lives in `src/illusionator/`, tests in `tests/`. Add a dependency with `uv add <package>` (or `uv add --dev <package>` for test-only tools) and commit `uv.lock`. CI runs `pytest` on every pull request.
+
+### Workflow
+
 This project is built test-first:
 
 1. Write a failing test for the behavior.
